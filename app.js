@@ -18,11 +18,26 @@ function onReady() {
         // set the input type to checkbox
         checkbox.type = 'checkbox';
 
+        // create label
+        let label = document.createElement('label');
+
+        // create button
+        let deleteBtn = document.createElement('button');
+        deleteBtn.textContent = "Delete";
+
+        // remove li when delete button is pressed
+        deleteBtn.addEventListener('click', function(event) {
+            toDoList.removeChild(this.parentElement);
+        })
+
         // set the title
         newLi.textContent = title;
 
         // attach the checkbox to the li
         newLi.appendChild(checkbox);
+
+        // attach delete button to the li
+        newLi.appendChild(deleteBtn);
 
         // attach the li to the ul
         toDoList.appendChild(newLi);
@@ -34,6 +49,6 @@ function onReady() {
 }
 
 window.onload = function() {
-    alert("The window has loaded!");
+    // alert("The window has loaded!");
     onReady();
 };

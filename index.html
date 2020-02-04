@@ -3,19 +3,37 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do App</title>
+
+    <!-- MDL -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="styles/main.css">
+
 </head>
 
 <body>
-    <h1>To-Do App</h1>
+    <div class="mdl-layout--fixed-header">
+        <header class="mdl-layout__header header">
+            <h1>To-Do App</h1>
+        </header>
+    </div>
 
-    <form id="addToDoForm">
-        <label for="newToDoText">New To-Do:</label>
-        <input type="text" id="newToDoText">
-        <button type="submit ">Add To-Do!</button>
-    </form>
+    <main>
+        <div class="form">
+            <form id="addToDoForm">
+                <label class="label" for="newToDoText">New To-Do:<br></label>
+                <input class="input" type="text" id="newToDoText">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" type="submit ">Add To-Do!</button>
+            </form>
+        </div>
 
-    <ul id="toDoList">
-    </ul>
+        <ul class="toDoItem" id="toDoList">
+        </ul>
+
+    </main>
 
     <script src="app.js"></script>
 </body>
